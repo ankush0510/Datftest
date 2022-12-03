@@ -24,7 +24,9 @@ public class HomePage extends testfilters {
 	public void entercounty(String countyname) {
 		WebElement Searchbox = driver.findElement(By.xpath("//*[@id=\"search-box-input\"]"));
 		Searchbox.sendKeys(countyname);
-
+System.out.println("Test");
+		
+		
 	}
 
 	public void selectcounty() {
