@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-03T00:10:31 GMT" name="Default suite" finished-at="2022-12-03T00:10:47 GMT" duration-ms="15863">
+    <groups>
+    </groups>
+    <test started-at="2022-12-03T00:10:31 GMT" name="Default test" finished-at="2022-12-03T00:10:47 GMT" duration-ms="15863">
+      <class name="tests.testfilters">
+        <test-method is-config="true" signature="validfilter()[pri:0, instance:tests.testfilters@a530d0a]" started-at="2022-12-03T00:10:31 GMT" name="validfilter" finished-at="2022-12-03T00:10:37 GMT" duration-ms="5910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validfilter -->
+        <test-method signature="testvalidfilter()[pri:0, instance:tests.testfilters@a530d0a]" started-at="2022-12-03T00:10:37 GMT" name="testvalidfilter" finished-at="2022-12-03T00:10:47 GMT" duration-ms="9908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testvalidfilter -->
+      </class> <!-- tests.testfilters -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
