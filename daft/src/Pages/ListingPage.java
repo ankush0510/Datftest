@@ -13,8 +13,10 @@ import org.testng.Assert;
 
 import tests.testfilters;
 
+// this class lists all the functions on the property listing page
 public class ListingPage extends testfilters {
 
+	// method to close the pop up displayed on the listing page
 	public void closepopup() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions
@@ -24,18 +26,21 @@ public class ListingPage extends testfilters {
 
 		Listingpopup.click();
 	}
-
+	
+    // method to select the filter option
 	public void selectfilter() {
 		WebElement FiltersButton = driver
 				.findElement(By.xpath("//*[@id=\"__next\"]/main/div[1]/div/div[2]/div[3]/div/button"));
 		FiltersButton.click();
 	}
-
+	
+    // method to enter the keyword in the filter searchbox
 	public void enterkeyword(String keyword) {
 		WebElement FilterKeyword = driver.findElement(By.xpath("//*[@id=\"keywordtermsModal\"]"));
 		FilterKeyword.sendKeys(keyword);
 	}
-
+    
+	//method to click on the result button after the filter is applied
 	public void clickresult() {
 
 		WebElement ResultButton = driver.findElement(By.xpath("/html/body/div[8]/div/div/div[2]/div/button/span"));
@@ -54,7 +59,7 @@ public class ListingPage extends testfilters {
 		}
 
 	}
-
+    // method to open the property page
 	public void openproperty() {
 
 		List<WebElement> Properties = driver
@@ -65,7 +70,7 @@ public class ListingPage extends testfilters {
 		}
 
 	}
-
+    // method to validate if garage is displayed in the property description
 	public void verifykeyword() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
@@ -75,7 +80,7 @@ public class ListingPage extends testfilters {
 		String PropertyFeatures = driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div[1]/div[2]/div[3]/ul"))
 				.getText();
 		Assert.assertTrue(PropertyFeatures.contains("garage"));
-		System.out.println("Garage keyword is displayed");
+		System.out.println("Test passed - Garage keyword is displayed");
 
 	}
 

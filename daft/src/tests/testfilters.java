@@ -12,9 +12,10 @@ public class testfilters {
 
 	public static WebDriver driver = null;
 	public String baseUrl;
-
+    
+	// this method opens firefox browser and navigates to the website
 	@BeforeTest
-	public void validfilter() {
+	public void openbrowser() {
 
 		System.setProperty("webdriver.geckodriver.driver", "/Users/bharga02/Desktop/Task/geckodriver");
 
@@ -24,7 +25,7 @@ public class testfilters {
 		driver.get(baseUrl);
 		
 	}
-
+    // this is a test method to use the methods in the homepage and listing page and validates the behavior
 	@Test
 	public void testvalidfilter() {
 		
@@ -42,16 +43,16 @@ public class testfilters {
 		listing.openproperty();
 		listing.verifykeyword();
 
-		// driver.quit();
+		
 
 	}
+	// this method close the browsers once the test is completed
+@AfterTest
 	
-//	@AfterTest
-//	
-//	public void closebrowser() {
-//		driver.quit();
-//		
-//	}
+	public void closebrowser() {
+		driver.quit();
+		
+	}
 
 }
 

@@ -14,18 +14,20 @@ import tests.testfilters;
 
 public class HomePage extends testfilters {
 
+	//this method accepts the privacy message once the user navigates to the website
 	public void privacymessage() {
 
 		WebElement Acceptprivacy = driver
 				.findElement(By.xpath("//*[@id=\"js-cookie-modal-level-one\"]/div/main/div/button[2]"));
 		Acceptprivacy.click();
 	}
-
+    // this method enters the county name in the searchbox on the homepage 
 	public void entercounty(String countyname) {
 		WebElement Searchbox = driver.findElement(By.xpath("//*[@id=\"search-box-input\"]"));
 		Searchbox.sendKeys(countyname);
 	}
-
+    
+	// this method selects the county from the search suggestions
 	public void selectcounty() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
